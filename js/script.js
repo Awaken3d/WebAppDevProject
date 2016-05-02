@@ -1,6 +1,6 @@
 // create the module and name it ultimateRecipes
 	// also include ngRoute for all our routing needs
-alert("asfasfaf");
+//alert("asfasfaf");
 var ultimateRecipes = angular.module('ultimateRecipes', ['ngRoute', 'firebase']).constant('FIREBASE_URL', 'https://recappy.firebaseIO.com/');
 
 ultimateRecipes.run(['$rootScope', '$location'
