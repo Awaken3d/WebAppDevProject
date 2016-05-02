@@ -1,0 +1,24 @@
+.ingredient,.required{
+	display:inline-block;
+	padding:2px 8px;
+	margin:0 10px 10px 0;
+	background-color:rgba(231,235,238,.3);
+	border:1px solid #e7ebee;
+	cursor:pointer;
+}
+.ingredient:hover,.required:hover{
+	background-color:rgba(231,235,238,.7);
+	transition:all .2s ease
+}
+.clicked{
+	visibility: hidden;
+}
+ul{
+	padding-left: 0px;
+}
+.loading{
+	width: 50%;
+	position: relative;
+	left: 25%;
+}
+

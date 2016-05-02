@@ -1,0 +1,37 @@
+<div class="jumbotron" ng-if="savedrecipies != 0">
+	<div class="container">
+		<ul class="rig columns-3">
+			<li ng-repeat="listItem in savedrecipies" my-repeat-directive>
+				<a target="_blank" href="{{listItem.recipe.source_url}}">
+					<img src="{{listItem.recipe.image_url}}" />
+					<h3>{{listItem.recipe.title}}</h3>
+				</a>
+				<em>{{listItem.recipe.publisher}}</em><br />
+				<div class="ingredient suggested-ingredient ng-scope ui-link ui-btn ui-btn-inline ui-shadow ui-corner-all ui-mini" ng-click="getIngredient(listItem.recipe.recipe_id)" ng-if="recipes[listItem.recipe.recipe_id] == null">
+					<span class="ng-binding"> Get ingredient</span>
+				</div>
+				<div>
+					<ul>
+						<li ng-repeat="ingredient in recipes[listItem.recipe.recipe_id].ingredients" my-repeat-directive>
+							{{ingredient}}
+						</li>
+					</ul>
+                    
+				</div>
+                
+			</li>
+		</ul>
+		<!--<span ng-repeat="listItem in list" style="padding-left: 20px; padding-right: 20px; width: 200px; height: 300px;">
+			<img src="{{listItem.image_url}}" style="max-width: 200px;">
+		</span>
+		<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+			<li ng-repeat="listItem in list" class="ui-li-has-thumb ">
+				<a href="{{listItem.source_url}}" target="_blank" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+					<img src="{{listItem.image_url}}" class="ui-li-thumb">
+					{{listItem.title}}
+				</a>
+			</li>
+		</ul>-->
+	</div>
+	<!--<input type="button" ng-click="getMoreResults()" value="Get more results!"></input>-->
+</div>
