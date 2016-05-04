@@ -22,7 +22,8 @@
 	<div class="container">
 		<ul class="rig columns-3">
 			<li ng-repeat="listItem in list" my-repeat-directive>
-				<a target="_blank" href="{{listItem.source_url}}">
+				<!--<a target="_blank" href="{{listItem.source_url}}">-->
+                    <a href="{{listItem.source_url}}">
 					<img src="{{listItem.image_url}}" />
 					<h3>{{listItem.title}}</h3>
 				</a>
